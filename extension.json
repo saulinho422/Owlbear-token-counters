@@ -1,6 +1,5 @@
 {
   "manifest_version": 1,
-  "id": "token-counters",
   "name": "Token Counters",
   "description": "Adicione contadores customizáveis aos tokens do Owlbear Rodeo.",
   "icon": "icon.png",
