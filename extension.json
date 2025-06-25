@@ -9,9 +9,9 @@
   "main": "dist/index.js",
   "type": "app",
   "permissions": [
-    { "id": "scene:read" },
-    { "id": "scene:write" },
-    { "id": "token:read" },
-    { "id": "token:write" }
+    { "id": "scene:read", "name": "Ler cenas" },
+    { "id": "scene:write", "name": "Modificar cenas" },
+    { "id": "token:read", "name": "Ler tokens" },
+    { "id": "token:write", "name": "Modificar tokens" }
   ]
 }
