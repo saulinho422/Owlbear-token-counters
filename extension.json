@@ -8,5 +8,10 @@
   "api": "1.0.0",
   "main": "dist/index.js",
   "type": "app",
-  "permissions": ["scene:read", "scene:write", "token:read", "token:write"]
+  "permissions": [
+    { "id": "scene:read" },
+    { "id": "scene:write" },
+    { "id": "token:read" },
+    { "id": "token:write" }
+  ]
 }
