@@ -4,7 +4,6 @@
   "description": "Adiciona um medidor de distância customizado (1 quadrado = 1,5m) e contadores aos tokens.",
   "author": "Negao Saulo",
   "icon": "icon.png",
-  "entry": "dist/main.js",
   "version": "1.0.0",
   "compatibility": {
     "owlbear-rodeo": ">=2.0.0"
