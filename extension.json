@@ -3,6 +3,5 @@
   "name": "Token Counters",
   "description": "Adicione contadores customizáveis aos tokens do Owlbear Rodeo.",
   "icon": "icon.png",
-  "version": "0.1.0",
-  "type": "app"
+  "version": "0.1.0"
 }
