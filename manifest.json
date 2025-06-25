@@ -1,6 +1,6 @@
 {
   "id": "minha-extensao-ruler-metros",
-  "title": "Medidor de Distância em Metros",
+  "name": "Medidor de Distância em Metros",
   "description": "Adiciona um medidor de distância customizado (1 quadrado = 1,5m) e contadores aos tokens.",
   "author": "Seu Nome",
   "icon": "icon.png",
