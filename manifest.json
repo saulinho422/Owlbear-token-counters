@@ -5,8 +5,5 @@
   "author": "Negao Saulo",
   "icon": "icon.png",
   "version": "1.0.0",
-  "compatibility": {
-    "owlbear-rodeo": ">=2.0.0"
-  },
   "tags": ["tool", "distance", "counter", "vtt"]
 }
