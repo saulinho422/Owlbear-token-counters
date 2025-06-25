@@ -6,6 +6,7 @@ import { renderTokenCounter } from './tokenCounters';
 import type { TokenCounter } from './tokenCounters';
 import './tokenCounters.css';
 import './owlbear-integration';
+import './ruler-tool';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

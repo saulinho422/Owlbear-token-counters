@@ -1,0 +1,13 @@
+{
+  "id": "minha-extensao-ruler-metros",
+  "title": "Medidor de Distância em Metros",
+  "description": "Adiciona um medidor de distância customizado (1 quadrado = 1,5m) e contadores aos tokens.",
+  "author": "Seu Nome",
+  "icon": "icon.png",
+  "entry": "dist/main.js",
+  "version": "1.0.0",
+  "compatibility": {
+    "owlbear-rodeo": ">=2.0.0"
+  },
+  "tags": ["tool", "distance", "counter", "vtt"]
+}

@@ -1,6 +1,7 @@
 import { renderTokenCounter } from './tokenCounters';
 import type { TokenCounter } from './tokenCounters';
 import './tokenCounters.css';
+import { gerarTooltipDistancia } from './ruler-metros';
 
 // Owlbear Rodeo API integration
 // @ts-ignore
@@ -177,6 +178,50 @@ function setupOwlbearIntegration(app: HTMLElement) {
     });
   }
 }
+
+function addRulerOverlay() {
+  // Cria overlay se não existir
+  let overlay = document.getElementById('ruler-metros-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'ruler-metros-overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.bottom = '16px';
+    overlay.style.right = '16px';
+    overlay.style.background = 'rgba(30,30,30,0.9)';
+    overlay.style.color = '#fff';
+    overlay.style.padding = '10px 18px';
+    overlay.style.borderRadius = '8px';
+    overlay.style.fontSize = '1.2em';
+    overlay.style.zIndex = '9999';
+    overlay.style.pointerEvents = 'none';
+    document.body.appendChild(overlay);
+  }
+  return overlay;
+}
+
+// Exemplo: escuta eventos de mouse para simular medição de distância
+let startPos: {x: number, y: number} | null = null;
+document.addEventListener('mousedown', (e) => {
+  if (e.button === 2) { // botão direito
+    startPos = { x: e.clientX, y: e.clientY };
+  }
+});
+document.addEventListener('mouseup', (e) => {
+  if (startPos && e.button === 2) {
+    const dx = e.clientX - startPos.x;
+    const dy = e.clientY - startPos.y;
+    const distPx = Math.sqrt(dx*dx + dy*dy);
+    // Supondo 1 quadrado = 50px (ajuste conforme o grid do Owlbear)
+    const pxPorQuadrado = 50;
+    const quadrados = distPx / pxPorQuadrado;
+    const overlay = addRulerOverlay();
+    overlay.textContent = gerarTooltipDistancia(quadrados);
+    overlay.style.display = 'block';
+    setTimeout(() => { overlay.style.display = 'none'; }, 4000);
+    startPos = null;
+  }
+});
 
 // Inicialização Owlbear
 const app = document.querySelector<HTMLDivElement>('#app');
