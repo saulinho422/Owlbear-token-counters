@@ -3,5 +3,9 @@
   "name": "Medidor de Distância em Metros",
   "description": "Adiciona um medidor de distância customizado (1 quadrado = 1,5m) e contadores aos tokens.",
   "icon": "icon.png",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "entry": "dist/main.js",
+  "compatibility": {
+    "owlbear-rodeo": ">=2.0.0"
+  }
 }
