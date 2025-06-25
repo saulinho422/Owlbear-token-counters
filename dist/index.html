@@ -10,5 +10,14 @@
   </head>
   <body>
     <div id="app"></div>
+    <script>
+      import './owlbear-integration';
+
+      const app = document.querySelector<HTMLDivElement>('#app');
+      if (app) {
+        app.innerHTML = '';
+        // A função setupOwlbearIntegration já será chamada pelo import
+      }
+    </script>
   </body>
 </html>
